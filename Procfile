@@ -1,1 +1,1 @@
-web: gunicorn techtravelup.wsgi
+web: gunicorn techtravelup.wsgi:application
