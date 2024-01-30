@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -125,5 +125,8 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = 'https://techtravelup-377d01f6147c.herokuapp.com/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / STATIC_URL
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
